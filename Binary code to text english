@@ -1,0 +1,16 @@
+def binary_to_text(binary):
+    """convert binary code to text."""
+    try:
+        # Разделяем строку на 8-битные блоки и конвертируем в символы
+        text = ''.join(chr(int(byte, 2)) for byte in binary.split())
+        return text
+    except ValueError:
+        return "Error: incorect binary code."
+
+def main():
+    binary = input("Enter the Binary code (separated by spaces): ")
+    text = binary_to_text(binary)
+    print(f"Text: {text}")
+
+if __name__ == "__main__":
+    main()
