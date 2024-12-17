@@ -1,0 +1,12 @@
+def text_to_binary(text):
+    """convert to binary code."""
+    binary_result = ' '.join(format(ord(char), '08b') for char in text)
+    return binary_result
+
+def main():
+    text = input("enter the text that would be converted: ")
+    binary_code = text_to_binary(text)
+    print(f"Binary code: {binary_code}")
+
+if __name__ == "__main__":
+    main()
